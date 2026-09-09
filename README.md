@@ -1,9 +1,15 @@
-# Tategaki — required listing pages
+# Apps for Canva — listing pages
 
-The four pages the Canva Apps Marketplace requires for the **Tategaki** app:
-developer site, support, privacy policy, terms and conditions.
+Public pages required by the Canva Apps Marketplace, for every app I publish.
 
-Plain static HTML, no build step and no dependencies — legal pages should not
-depend on a CDN staying up. Served by GitHub Pages from the repository root.
+    /                     developer site  → 「公司或你的网站 URL」
+    /<app>/               app overview
+    /<app>/terms.html     → 「条款和条件URL」
+    /<app>/privacy.html   → 「隐私政策URL」
+    /<app>/support.html   → 「支持团队URL」
 
-`.nojekyll` is present so GitHub Pages serves every file as-is.
+One folder per app, so a second app needs no new repository and no new URLs
+for the developer-level fields.
+
+Plain static HTML, no build step, no dependencies — legal pages should not
+depend on a CDN staying up. `.nojekyll` keeps GitHub Pages from filtering files.
