@@ -1,6 +1,6 @@
-# Apps for Canva — listing pages
+# Jigsmith — Canva app listing pages
 
-Public pages required by the Canva Apps Marketplace, for every app I publish.
+Public pages required by the Canva Apps Marketplace, for every Jigsmith app.
 
     /                     developer site  → 「公司或你的网站 URL」
     /<app>/               app overview

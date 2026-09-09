@@ -33,6 +33,12 @@ header { border-bottom: 1px solid var(--line); padding-bottom: 1.25rem; margin-b
   font-size: 24px; line-height: 1;
   font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
 }
+/* 工作室标记是拉丁字母，不该继承应用页那套明朝字体栈。 */
+.mark-studio {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
 .brand b { font-size: 1.05rem; letter-spacing: 0.02em; }
 nav { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; font-size: 0.9rem; }
 nav a { color: var(--accent); text-decoration: none; }
