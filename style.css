@@ -1,0 +1,60 @@
+/* 四个页面共用。无外部依赖：法律页面不应该依赖 CDN。 */
+:root {
+  --ink: #1a1a1a;
+  --muted: #5a5a5a;
+  --line: #e3ddd0;
+  --paper: #f7f4ec;
+  --accent: #1b3b6f;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ece7dc;
+    --muted: #a49e93;
+    --line: #33302b;
+    --paper: #14161a;
+    --accent: #9fc0ef;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic",
+    "Noto Sans JP", "PingFang SC", "Segoe UI", Roboto, sans-serif;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+header { border-bottom: 1px solid var(--line); padding-bottom: 1.25rem; margin-bottom: 2rem; }
+.brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: inherit; }
+.mark {
+  width: 40px; height: 40px; flex: 0 0 40px;
+  background: var(--accent); color: var(--paper);
+  display: grid; place-items: center;
+  font-size: 24px; line-height: 1;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+}
+.brand b { font-size: 1.05rem; letter-spacing: 0.02em; }
+nav { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; font-size: 0.9rem; }
+nav a { color: var(--accent); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+nav a[aria-current] { color: var(--muted); pointer-events: none; }
+h1 { font-size: 1.6rem; line-height: 1.3; margin: 0 0 0.35rem; }
+h2 { font-size: 1.1rem; margin: 2.25rem 0 0.5rem; }
+h3 { font-size: 0.98rem; margin: 1.5rem 0 0.35rem; }
+.date { color: var(--muted); font-size: 0.875rem; margin: 0 0 2rem; }
+p, li { color: var(--ink); }
+ul { padding-left: 1.25rem; }
+li { margin: 0.35rem 0; }
+a { color: var(--accent); }
+.note {
+  border-left: 3px solid var(--accent);
+  padding: 0.15rem 0 0.15rem 1rem;
+  margin: 1.5rem 0;
+  color: var(--muted);
+}
+footer {
+  margin-top: 3.5rem; padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted); font-size: 0.875rem;
+}
+code { font-size: 0.9em; background: rgba(127,127,127,0.14); padding: 0.1em 0.35em; }
